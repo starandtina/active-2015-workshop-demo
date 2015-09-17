@@ -6,7 +6,7 @@
     </div>
     <div class="list card" ng-repeat="event in events | filter:search">
       <div class="item item-divider" style='padding-bottom:40px'>
-        <p class='dark'>{{event.title}}</p>
+        <p class='dark' ng-click='popover.show($event)'>{{event.title}}</p>
         <h2>{{event.name}}</h2>
         <p>{{event.status}}</p>
         <p>{{event.lastText}}</p>

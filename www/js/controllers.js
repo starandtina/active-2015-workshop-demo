@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('ExploreCtrl', function ($scope, Events) {
+.controller('ExploreCtrl', function ($scope, Events, $ionicPopover) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -14,6 +14,13 @@ angular.module('starter.controllers', [])
   //   Chats.remove(chat);
   // };
   $scope.events = Events.all();
+
+  // .fromTemplate() method
+  var template = '<ion-popover-view><ion-header-bar> <h1 class="title">My Popover Title</h1> </ion-header-bar> <ion-content> Hello! </ion-content></ion-popover-view>';
+
+  $scope.popover = $ionicPopover.fromTemplate(template, {
+    scope: $scope
+  });
 })
 
 .controller('ChatDetailCtrl', function ($scope, $stateParams, Chats) {
