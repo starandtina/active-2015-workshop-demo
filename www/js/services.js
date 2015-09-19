@@ -31,6 +31,14 @@ angular.module('starter.services', [])
     return {
       all: function () {
         return events;
+      },
+      get: function (eventId) {
+        for (var i = 0; i < events.length; i++) {
+          if (events[i].id === eventId) {
+            return events[i];
+          }
+        }
+        return null;
       }
     };
   }).factory('MyEvents', function () {
@@ -65,6 +73,14 @@ angular.module('starter.services', [])
     return {
       all: function () {
         return events;
+      },
+      get: function (eventId) {
+        for (var i = 0; i < events.length; i++) {
+          if (events[i].id === eventId) {
+            return events[i];
+          }
+        }
+        return null;
       }
     };
   })

@@ -7,7 +7,7 @@
     <div class="list card animated rubberBand" ng-repeat="event in events | filter:search">
       <div class="item item-divider" style='padding-bottom:40px'>
         <p class='dark' ng-click='popover.show($event)'>{{event.title}}</p>
-        <h2>{{event.name}}</h2>
+        <h2><a href='#/tab/events/{{event.id}}'>{{event.name}}</a></h2>
         <p>{{event.status}}</p>
         <p>{{event.lastText}}</p>
       </div>

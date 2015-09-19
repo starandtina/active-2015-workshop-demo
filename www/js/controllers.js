@@ -18,10 +18,6 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
-  // $scope.chats = Chats.all();
-  // $scope.remove = function (chat) {
-  //   Chats.remove(chat);
-  // };
   $scope.events = Events.all();
 
   // .fromTemplate() method
@@ -32,8 +28,9 @@ angular.module('starter.controllers', [])
   });
 })
 
-.controller('ChatDetailCtrl', function ($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
+.controller('EventDetailCtrl', function ($scope, $stateParams, Events) {
+  debugger
+  $scope.eventDetail = Events.get($stateParams.eventId);
 })
 
 .controller('MyActiveCtrl', function ($scope, MyEvents) {

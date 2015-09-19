@@ -50,6 +50,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+  .state('tab.event-detail', {
+    url: '/events/:eventId',
+    views: {
+      'tab-explore': {
+        templateUrl: 'templates/event-detail.html',
+        controller: 'EventDetailCtrl'
+      }
+    }
+  })
+
   .state('tab.active', {
     url: '/active',
     views: {
