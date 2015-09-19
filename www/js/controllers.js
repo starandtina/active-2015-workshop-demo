@@ -1,5 +1,14 @@
 angular.module('starter.controllers', [])
 
+.controller('NavCtrl', function ($scope, $ionicSideMenuDelegate) {
+  $scope.showMenu = function () {
+    $ionicSideMenuDelegate.toggleLeft();
+  };
+  $scope.showRightMenu = function () {
+    $ionicSideMenuDelegate.toggleRight();
+  };
+})
+
 .controller('ExploreCtrl', function ($scope, Events, $ionicPopover) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.

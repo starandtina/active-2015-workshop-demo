@@ -4,7 +4,7 @@
       <label class="item item-input">
         <input type="text" placeholder="Search" ng-model='search'></label>
     </div>
-    <div class="list card" ng-repeat="event in events | filter:search">
+    <div class="list card animated rubberBand" ng-repeat="event in events | filter:search">
       <div class="item item-divider" style='padding-bottom:40px'>
         <p class='dark' ng-click='popover.show($event)'>{{event.title}}</p>
         <h2>{{event.name}}</h2>
